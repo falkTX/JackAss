@@ -1,4 +1,4 @@
 JackAss
 =======
 
-JACK-MIDI support for all VST hosts, including Wine apps
+JACK-MIDI support for VST hosts, including Wine apps
