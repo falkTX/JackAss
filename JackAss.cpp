@@ -1,6 +1,6 @@
 /*
  * JackAss VST plugin
- * Copyright (C) 2013 Filipe Coelho <falktx@falktx.com>
+ * Copyright (C) 2013-2014 Filipe Coelho <falktx@falktx.com>
  *
  * Permission to use, copy, modify, and/or distribute this software for any purpose with
  * or without fee is hereby granted, provided that the above copyright notice and this
@@ -273,15 +273,7 @@ public:
         }
 
         // Create instance + jack-port for this plugin
-#if defined(__MINGW64__)
-        std::sprintf(strBuf, "midi-out_%02llu", gInstances.size()+1);
-#elif defined(__MINGW32__)
-        std::sprintf(strBuf, "midi-out_%02u", gInstances.size()+1);
-#elif (defined(__LP64__) || defined(__APPLE__))
-        std::sprintf(strBuf, "midi-out_%02lu", gInstances.size()+1);
-#else
-        std::sprintf(strBuf, "midi-out_%02u", gInstances.size()+1);
-#endif
+        std::sprintf(strBuf, "midi-out_%02u", (int)gInstances.size() + 1);
 
         if (jack_port_t* const jport = jackbridge_port_register(gJackClient, strBuf, JACK_DEFAULT_MIDI_TYPE, JackPortIsOutput, 0))
         {
