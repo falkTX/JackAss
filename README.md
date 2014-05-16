@@ -7,11 +7,11 @@ JackAss
     Each new plugin instance creates a new MIDI port.<br/>
 </p>
 <p>
-    <b>Here's JackAss loaded in FL Studio:</b><br/><br/>
-    <a href="http://kxstudio.sourceforge.net/screenshots/news/jackass_flstudio.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/jackass_flstudio_crop.png" alt=""/></a><br/><br/>
+    <b>Here's JackAss loaded in FL Studio:</b><br/>
+    <a href="http://kxstudio.sourceforge.net/screenshots/news/jackass_flstudio.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/jackass_flstudio_crop.png" alt=""/></a><br/>
     <br/>
-    <b>And an example setup in Carla for it:</b><br/><br/>
-    <a href="http://kxstudio.sourceforge.net/screenshots/news/jackass_carla.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/jackass_carla_crop.png" alt=""/></a><br/><br/>
+    <b>And an example setup in Carla for it:</b><br/>
+    <a href="http://kxstudio.sourceforge.net/screenshots/news/jackass_carla.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/jackass_carla_crop.png" alt=""/></a><br/>
 </p>
 <p>
     JackAss sends the notes from the host to its JACK-MIDI port.<br/>
