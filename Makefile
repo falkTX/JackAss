@@ -27,13 +27,11 @@ BASE_FLAGS += -DNDEBUG $(BASE_OPTS) -fvisibility=hidden -fvisibility-inlines-hid
 LINK_OPTS   = -Wl,--strip-all
 endif
 
-BUILD_FLAGS = $(BASE_FLAGS) -std=gnu++0x $(CXXFLAGS)
-
 # --------------------------------------------------------------
 # Linux
 
 LINUX_FLAGS  = $(BASE_FLAGS) -std=gnu++0x $(CXXFLAGS)
-LINUX_FLAGS += $(LINK_OPTS) -ldl -lpthread -shared $(LDFLAGS)
+LINUX_FLAGS += $(LINK_OPTS) -ldl -lpthread -shared -Wl,--defsym,main=VSTPluginMain $(LDFLAGS)
 
 # --------------------------------------------------------------
 # Mac OS
