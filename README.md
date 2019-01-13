@@ -23,7 +23,7 @@ JackAss
 </p>
 <p>
     JackAss currently has builds for Linux, MacOS and Windows, all 32bit and 64bit. Just follow
-        <a href="https://github.com/falkTX/JackAss/tree/master/release" class="external free" rel="nofollow" target="_blank">this link</a>.<br/>
+        <a href="https://github.com/falkTX/JackAss/releases" class="external free" rel="nofollow" target="_blank">this link</a>.<br/>
     As a bonus, you also get special Wine builds - load it in a Windows application running in Linux via Wine and you get a real, native JACK-MIDI port from it!<br/>
 </p>
 <p>
