@@ -179,7 +179,7 @@ static std::list<JackAssInstance*> gInstances;
 
 static int jprocess_callback(const jack_nframes_t nframes, void*)
 {
-    for (std::list<JackAssInstance*>::iterator it = gInstances.begin(); it != gInstances.end(); ++it)
+    for (std::list<JackAssInstance*>::iterator it = gInstances.begin(), end = gInstances.end(); it != end; ++it)
         (*it)->jprocess(nframes);
     return 0;
 }
