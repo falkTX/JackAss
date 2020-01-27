@@ -173,14 +173,19 @@ private:
 // static list of JackAss instances
 
 static std::list<JackAssInstance*> gInstances;
+static pthread_mutex_t gInstancesMutex = PTHREAD_MUTEX_INITIALIZER;
 
 // -------------------------------------------------
 // JACK calls
 
 static int jprocess_callback(const jack_nframes_t nframes, void*)
 {
+    pthread_mutex_lock(&gInstancesMutex);
+
     for (std::list<JackAssInstance*>::iterator it = gInstances.begin(), end = gInstances.end(); it != end; ++it)
         (*it)->jprocess(nframes);
+
+    pthread_mutex_unlock(&gInstancesMutex);
     return 0;
 }
 
@@ -278,7 +283,10 @@ public:
         if (jack_port_t* const jport = jackbridge_port_register(gJackClient, strBuf, JACK_DEFAULT_MIDI_TYPE, JackPortIsOutput, 0))
         {
             fInstance = new JackAssInstance(jport);
+
+            pthread_mutex_lock(&gInstancesMutex);
             gInstances.push_back(fInstance);
+            pthread_mutex_unlock(&gInstancesMutex);
         }
     }
 
@@ -297,7 +305,10 @@ public:
 
         if (fInstance != nullptr)
         {
+            pthread_mutex_lock(&gInstancesMutex);
             gInstances.remove(fInstance);
+            pthread_mutex_unlock(&gInstancesMutex);
+
             delete fInstance;
             fInstance = nullptr;
         }
