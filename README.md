@@ -8,10 +8,10 @@ JackAss
 </p>
 <p>
     <b>Here's JackAss loaded in FL Studio:</b><br/>
-    <a href="https://kx.studio/screenshots/news/jackass_flstudio.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/jackass_flstudio_crop.png" alt=""/></a><br/>
+    <a href="https://kx.studio/screenshots/news/jackass_flstudio.png"><img src="https://kx.studio/screenshots/news/jackass_flstudio_crop.png" alt=""/></a><br/>
     <br/>
     <b>And an example setup in Carla for it:</b><br/>
-    <a href="https://kx.studio/screenshots/news/jackass_carla.png"><img src="http://kxstudio.sourceforge.net/screenshots/news/jackass_carla_crop.png" alt=""/></a><br/>
+    <a href="https://kx.studio/screenshots/news/jackass_carla.png"><img src="https://kx.studio/screenshots/news/jackass_carla_crop.png" alt=""/></a><br/>
 </p>
 <p>
     JackAss sends the notes from the host to its JACK-MIDI port.<br/>
